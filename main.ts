@@ -1,3 +1,6 @@
+namespace SpriteKind {
+    export const button = SpriteKind.create()
+}
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     scene.setBackgroundImage(img`
         9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
@@ -148,7 +151,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         ..........ffffffff....................ffffffff..........
         ..................ffffffffffffffffffff..................
         ..................ffffffffffffffffffff..................
-        `, SpriteKind.Projectile)
+        `, SpriteKind.button)
     mySprite = sprites.create(img`
         ....f...........
         ....ff..........
@@ -176,7 +179,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 controller.A.onEvent(ControllerButtonEvent.Released, function () {
 	
 })
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
+sprites.onOverlap(SpriteKind.Player, SpriteKind.button, function (sprite, otherSprite) {
 	
 })
 let mySprite: Sprite = null
